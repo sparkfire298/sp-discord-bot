@@ -3,6 +3,7 @@ Fun Discord Bot relying on no intents - ultimately privacy-respecting overall
 
 # Setup
 *Requirements: Node.js v17 or higher, Git*
+
 *Best works with Linux*
 
 1. Clone the repository
