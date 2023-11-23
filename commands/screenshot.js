@@ -3,6 +3,7 @@ const { MessageEmbed, MessageAttachment } = require('discord.js');
 const fetch = require('node-fetch');
 
 const filter = 'https://raw.githubusercontent.com/Bon-Appetit/porn-domains/master/block.txt';
+const apikey = '';
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -35,7 +36,7 @@ module.exports = {
             }
             const end = new Date();
 
-            const res = await fetch(`https://screenshot.abstractapi.com/v1/?api_key=88a532ad6f6f4df4a32d3390afc5a47e&url=${encodeURIComponent(url)}&width=1920&height=1080&capture_full_page=false`);
+            const res = await fetch(`https://screenshot.abstractapi.com/v1/?api_key=${apikey}&url=${encodeURIComponent(url)}&width=1920&height=1080&capture_full_page=false`);
             const img = await res.buffer();
 
             const attachment = new MessageAttachment(img, 'screenshot.png');
