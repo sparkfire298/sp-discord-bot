@@ -1,3 +1,18 @@
+/*
+   This command requires a pretty beefy system to work quickly. As the filter textfile is so giant, you might want to remove the filter.
+   You can remove it by removing this bit of code:
+
+   if (!checknsfw) {
+                const txtget = await fetch(filter);
+                const filters = await txtget.text();
+
+                if (filters.includes(url)) {
+                    return interaction.editReply(':no_entry: NSFW detected, please go to an NSFW channel.');
+                }
+            }
+
+    
+*/
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const fetch = require('node-fetch');
